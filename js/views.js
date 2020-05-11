@@ -51,10 +51,10 @@ function createCountryPage(countryData) {
   // reset the page
   elcountryListSection.innerHTML = "";
 
-  // call event for back button
-
   let btnBack = document.querySelector("#btnBack");
   btnBack.style.display = "block";
+
+  // call event for back button
   countryPage_events(btnBack);
 
   elcountryListSection.className = "container--country-view";
@@ -100,38 +100,36 @@ function createCountryPage(countryData) {
     elinfoDiv.appendChild(div);
   });
 
+  function formatPopulation(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "1,");
+  }
+
   // -- fill data ---
 
   elH1.innerText = countryData.name;
   elImg.src = countryData.flag;
 
-  console.log(countryData);
   elDiv1.innerHTML = `<b>Native Name : </b> ${countryData.nativeName}`;
-  elDiv2.innerHTML = `<b>Population : </b> ${countryData.population}`;
+  elDiv2.innerHTML = `<b>Population : </b> ${formatPopulation(
+    countryData.population
+  )}`;
   elDiv3.innerHTML = `<b>Region : </b> ${countryData.region}`;
   elDiv4.innerHTML = `<b>Sub Region : </b> ${countryData.subregion}`;
   elDiv5.innerHTML = `<b>Capital : </b> ${countryData.capital}`;
   elDiv6.innerHTML = `<b>Top Level Domain : </b> ${countryData.topLevelDomain}`;
   elDiv7.innerHTML = `<b>Currencies : </b> ${countryData.currencies[0].name}`;
-  elDiv8.innerHTML = `<b>Languages : </b> ${countryData.region}`;
+
+  let langs = [];
+  let langObj = countryData.languages;
+  for (key in langObj) {
+    if (langObj.hasOwnProperty(key)) {
+      langs.push(langObj[key].name);
+    }
+  }
+  elDiv8.innerHTML = `<b>Languages : </b> ${langs.join(",")}`;
 
   /*
-
-population
-region
-subregion
-capital
-topLevelDomain
-currencies.name  array
-languages.name  array 
-
-
-
-
-  // -- add event to controls
-  countryCardClick(divCountryItem, countryData.alpha2Code);
-
-  let elUL = document.createElement("ul");
+ let elUL = document.createElement("ul");
   divCountryItem.appendChild(elUL);
 
   elUL.insertAdjacentHTML(
@@ -147,6 +145,5 @@ languages.name  array
     `beforeend`,
     `<li><b>Capital : </b>${countryData.capital}</li>`
   );
-
   */
 }

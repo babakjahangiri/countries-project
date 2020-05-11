@@ -59,8 +59,8 @@ main {
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   row-gap: 30px;
   width: 98%;
   margin-left: auto;
@@ -136,17 +136,20 @@ main {
 }
 
 .container--country-img {
-  width: 45%;
+  width: 40%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  text-align: right;
+  text-align: left;
   padding: 10px;
+  margin-left: 20px;
 }
 
 .container--country-img img {
-  width: 70%;
+  width: 90%;
+  max-height: 300px;
   height: auto;
+  margin: 30px;
 }
 
 .container--country-details {
@@ -177,7 +180,7 @@ main {
 
 input[type="button"] {
   font-size: 1em;
-  margin: 5px 4px;
+  margin: 5px auto 5px 50px;
   padding: 10px;
   cursor: pointer;
   width: 100px;

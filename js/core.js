@@ -1,7 +1,8 @@
 /* ---  API ENDPOINTS Definations  --- */
 
 let url__allCountries = "https://restcountries.eu/rest/v2/all";
-let url__getCountryByCode = "https://restcountries.eu/rest/v2/alpha/{code}";
+let url__getCountryByAlpha2Code =
+  "https://restcountries.eu/rest/v2/alpha/{code}";
 let url__getCountryByRegion =
   "https://restcountries.eu/rest/v2/region/{region}";
 let url__searchCountryByName = "https://restcountries.eu/rest/v2/name/{name}";
@@ -26,8 +27,8 @@ async function getAllCountriesAsync() {
   return await fetchData(url__allCountries);
 }
 
-async function getCountryByCodeAsync(code) {
-  return await fetchData(url__getCountryByCode.replace("{code}", code));
+async function getCountryByAlpha2CodeAsync(code) {
+  return await fetchData(url__getCountryByAlpha2Code.replace("{code}", code));
 }
 
 async function getCountryByRegionAsync(region) {

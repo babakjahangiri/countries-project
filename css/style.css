@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
 header {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,14 +51,14 @@ main {
   -webkit-box-shadow: 0px 2px 5px #e6e6e6;
   box-shadow: inset 0px 2px 5px #e6e6e6;
   padding-top: 50px;
-  height: 400px;
+  min-height: 500px;
 }
 
-.container-country {
+.container--country-list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   -webkit-column-gap: 40px;
           column-gap: 40px;
   row-gap: 30px;
@@ -109,6 +113,78 @@ main {
 
 .country-card ul li b {
   font-weight: 500;
+}
+
+.container--country-view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container--country-right {
+  width: 45%;
+  margin: 50px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.container--country-right h1 {
+  font-size: 1.45em;
+  margin-left: 10px;
+}
+
+.container--country-img {
+  width: 45%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: right;
+  padding: 10px;
+}
+
+.container--country-img img {
+  width: 70%;
+  height: auto;
+}
+
+.container--country-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 200px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container--country-details div {
+  width: 50%;
+  padding: 10px;
+  font-size: 0.85em;
+}
+
+.container--country-details div b {
+  font-weight: 600;
+}
+
+input[type="button"] {
+  font-size: 1em;
+  margin: 5px 4px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  color: #151515;
+  -webkit-box-shadow: 0px 3px 20px #dcdcdc;
+          box-shadow: 0px 3px 20px #dcdcdc;
 }
 
 body {

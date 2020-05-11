@@ -1,31 +1,27 @@
 function countryList_events() {
   drdRegions.addEventListener("change", (event) => {
     //  currentShowId = drdShows.value;
-    findEpisodeByShowId(drdShows.value);
   });
 
   searchBox.addEventListener("input", (event) => {
     //currentShowId = drdShows.value;
-    findEpisodeByShowId(drdShows.value);
   });
 }
 
-function countryCardClick(element) {
+function countryCardClick(element, alpha2Code) {
   element.addEventListener("click", (event) => {
-    //currentShowId = drdShows.value;
-    //findEpisodeByShowId(drdShows.value);
-    alert("clicked");
+    pageState = 2;
+    pageAlpha2code = alpha2Code;
+
+    loadPage();
   });
 }
 
-function countryPage_events() {
-  backBtn.addEventListener("click", (event) => {
-    //currentShowId = drdShows.value;
-    //go to country page
-  });
+function countryPage_events(btnBack) {
+  btnBack.addEventListener("click", (event) => {
+    pageState = 1;
+    pageAlpha2code = "";
 
-  countrybtn.addEventListener("click", (event) => {
-    //currentShowId = drdShows.value;
-    //go to specific country page
+    loadPage();
   });
 }

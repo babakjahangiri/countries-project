@@ -9,6 +9,9 @@ The designs were created to the following widths:
 
 ## Colors
 
+
+
+
 ### Neutral
 
 - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)

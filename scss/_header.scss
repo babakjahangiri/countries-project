@@ -1,0 +1,33 @@
+@import "_variables.scss";
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $header-color;
+  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+header div {
+  align-self: center;
+  min-height: 50px;
+  width: 48%;
+}
+
+header div:first-child {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+header div:last-child {
+  font-size: 1em;
+  text-align: right;
+}
+
+.imgmoon {
+  height: 20px;
+  width: 20px;
+}

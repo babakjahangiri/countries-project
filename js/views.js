@@ -128,6 +128,48 @@ function createCountryPage(countryData) {
   }
   elDiv8.innerHTML = `<b>Languages : </b> ${langs.join(",")}`;
 
+  elDivBorderCountry = document.createElement("div");
+  elDivBorderCountry.className = "container-border-countries";
+  divRight.appendChild(elDivBorderCountry);
+
+  elSpanText = document.createElement("span");
+  elSpanText.innerText = "Border Countries :";
+
+  elDivBorderCountry.appendChild(elSpanText);
+
+  let borderCountries = [];
+  let bcObj = countryData.borders;
+  for (key in bcObj) {
+    if (bcObj.hasOwnProperty(key)) {
+      // getCountryNameAsync("IRN").then((c) => console.log(c));
+
+      getCountryByAlphaCodeAsync(bcObj[key]).then((data) => {
+        var elbtn = document.createElement("button");
+        elbtn.id = "bc_" + data.alpha2Code;
+        elbtn.value = data.alpha2Code;
+        elbtn.innerText = data.name;
+
+        elDivBorderCountry.appendChild(elbtn);
+
+        // countryViewBtn_event(elbtn, data.alpha2Code); // problem here !!!!
+      });
+
+      //langs.push(langObj[key].name);
+      //console.log(bcObj[key]);
+
+      // getCountryNameAsync(bcObj[key]).then((n) => {
+      //   console.log(n);
+      // });
+
+      //
+    }
+
+    //getCountryNameAsync("IRN").then((c) => console.log(c));
+  }
+
+  //var c = new Country("IR");
+  //console.log(c.getCountryName());
+
   /*
  let elUL = document.createElement("ul");
   divCountryItem.appendChild(elUL);

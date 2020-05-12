@@ -29,24 +29,13 @@ function loadCountryList() {
 }
 
 function loadCountryDetails() {
-  console.log(pageAlpha2code);
-  getCountryByAlpha2CodeAsync(pageAlpha2code).then((data) => {
+  getCountryByAlphaCodeAsync(pageAlpha2code).then((data) => {
     createCountryPage(data);
   });
 }
 
-//getCountryByRegionAsync("europe").then((data) => console.log(data));
-
-//console.log(countryList);
-
-//myObject = data;
-/* 
-.then(episodeData => {      
-    episodeData.forEach(el=>{
-        el.showId = showsIdList[showsId];
-        allEpisodesList.push(el);          
-    })    
-    showsId++;
-    getEpisodes();       
-})
-*/
+async function getCountryNameAsync(alphaCode) {
+  return await getCountryByAlphaCodeAsync(alphaCode).then((data) => {
+    data.name;
+  });
+}

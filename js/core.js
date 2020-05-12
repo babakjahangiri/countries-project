@@ -27,7 +27,7 @@ async function getAllCountriesAsync() {
   return await fetchData(url__allCountries);
 }
 
-async function getCountryByAlpha2CodeAsync(code) {
+async function getCountryByAlphaCodeAsync(code) {
   return await fetchData(url__getCountryByAlpha2Code.replace("{code}", code));
 }
 

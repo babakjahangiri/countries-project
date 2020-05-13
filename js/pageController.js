@@ -25,6 +25,7 @@ function loadCountryList() {
       countryList.push(el);
     });
     createCountryListPage(data);
+    countryList_events();
   });
 }
 
@@ -38,4 +39,11 @@ async function getCountryNameAsync(alphaCode) {
   return await getCountryByAlphaCodeAsync(alphaCode).then((data) => {
     data.name;
   });
+}
+
+function searchCountry(keyword) {
+  let searchResult = countryList.filter((country) => {
+    return country.name.toLowerCase().includes(keyword.toLowerCase());
+  });
+  createCountryListPage(searchResult);
 }

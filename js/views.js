@@ -3,16 +3,17 @@ const elcountryListSection = document.getElementById("countryListSection");
 function createCountryListPage(countriesData) {
   elcountryListSection.innerHTML = "";
 
+  let textSearch = document.querySelector("#search-container");
   let btnBack = document.querySelector("#btnBack");
   btnBack.style.display = "none";
-
-  let textSearch = document.querySelector("#search-container");
   textSearch.style.display = "block";
 
   Object.entries(countriesData).forEach(function ([index, e]) {
     createCountryItem(e);
     // console.log(e);
   });
+
+  //searchCountry();
 }
 
 function createCountryItem(countryData) {

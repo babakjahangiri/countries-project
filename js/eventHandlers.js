@@ -1,10 +1,11 @@
 function countryList_events() {
-  drdRegions.addEventListener("change", (event) => {
-    //  currentShowId = drdShows.value;
-  });
+  // drdRegions.addEventListener("change", (event) => {
+  //  currentShowId = drdShows.value;
+  // });
 
-  searchBox.addEventListener("input", (event) => {
-    //currentShowId = drdShows.value;
+  let textSearch = document.querySelector("#txtSearch");
+  textSearch.addEventListener("input", (event) => {
+    searchCountry(textSearch.value.trim());
   });
 }
 

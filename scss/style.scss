@@ -1,16 +1,28 @@
 @import "_variables.scss";
-@import "_header.scss";
-@import "_main.scss";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap");
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
 body {
   padding: 0;
   margin: 0;
 }
 
-// .search-box {
-// }
-
-// .dropdown-regions {
-// }
+@import "_header.scss";
+@import "_main.scss";

@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="moon" unicode="&#xe800;" d="M182 541q-52-82-52-181 0-141 101-243t243-101q98 0 181 53-187 18-321 151t-152 321z m166 256q-56-100-56-205 0-172 122-293t292-121q105 0 205 56-42-145-162-238t-275-93q-188 0-322 134t-134 323q0 154 93 274t237 163z" horiz-adv-x="928" />
+
+<glyph glyph-name="moon-inv" unicode="&#xe801;" d="M706 178q105 0 205 56-42-145-162-238t-275-93q-188 0-322 134t-134 323q0 154 93 274t237 163q-56-100-56-205 0-172 122-293t292-121z" horiz-adv-x="928" />
+
+<glyph glyph-name="search" unicode="&#xe802;" d="M746 209l254-255-105-105-254 254q-106-72-232-72-169 0-289 120t-120 289 120 289 289 120 289-120 120-289q0-127-72-231z m-65 231q0 113-79 193t-193 80-193-80-80-193 80-192 193-80 193 80 79 192z" horiz-adv-x="1000" />
+
+<glyph glyph-name="down-open-big" unicode="&#xe803;" d="M63 570l370-356 372 356q22 26 48 0 26-22 0-48l-396-392q-22-22-48 0l-396 392q-26 26 0 48 24 24 50 0z" horiz-adv-x="866" />
+
+<glyph glyph-name="left-open" unicode="&#xf007;" d="M0 353l391 391q18 18 43 18 24 0 43-18 18-18 18-44t-18-43l-304-304 304-305q18-17 18-43t-18-43q-18-18-43-18t-43 18z" horiz-adv-x="495.1" />
+</font>
+</defs>
+</svg>

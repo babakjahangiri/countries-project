@@ -6,6 +6,9 @@ function createCountryListPage(countriesData) {
   let btnBack = document.querySelector("#btnBack");
   btnBack.style.display = "none";
 
+  let textSearch = document.querySelector("#search-container");
+  textSearch.style.display = "block";
+
   Object.entries(countriesData).forEach(function ([index, e]) {
     createCountryItem(e);
     // console.log(e);
@@ -53,6 +56,9 @@ function createCountryPage(countryData) {
 
   let btnBack = document.querySelector("#btnBack");
   btnBack.style.display = "block";
+
+  let textSearch = document.querySelector("#search-container");
+  textSearch.style.display = "none";
 
   // call event for back button
   countryPage_events(btnBack);

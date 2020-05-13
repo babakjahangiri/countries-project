@@ -7,17 +7,19 @@
       Countries Project | Babak Jahangiri (https://github.com/babakjahangiri)
     </title>
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fontello.css" />
   </head>
   <body>
     <header id="header">
       <div><p>Where in the world?</p></div>
-      <div>
-        <a class="darkmode" href="#">
-          <img
-            class="imgmoon"
+      <div class="container_changeMode">
+        <a href="#"
+          ><span>Dark Mode</span>
+          <i class="font-icon icon-moon"></i>
+          <!-- <img
+            class="iMoon"
             src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PHBhdGggZD0iTTIwLjIxLDE1LjMyQTguNTYsOC41NiwwLDEsMSwxMS4yOSwzLjVhLjUuNSwwLDAsMSwuNTEuMjguNDkuNDksMCwwLDEtLjA5LjU3QTYuNDYsNi40NiwwLDAsMCw5LjgsOWE2LjU3LDYuNTcsMCwwLDAsOS43MSw1LjcyLjUyLjUyLDAsMCwxLC41OC4wN0EuNTIuNTIsMCwwLDEsMjAuMjEsMTUuMzJaIiBmaWxsPSIjNDY0NjQ2Ii8+PC9zdmc+"
-          />
-          Dark Mode
+        /> -->
         </a>
       </div>
     </header>
@@ -26,6 +28,20 @@
       <section id="filters" class="container-filters">
         <div>
           <input type="button" id="btnBack" value="Back" />
+
+          <!-- <img
+            class="iSearch"
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNS44NTMgMTYuNTZjLTEuNjgzIDEuNTE3LTMuOTExIDIuNDQtNi4zNTMgMi40NC01LjI0MyAwLTkuNS00LjI1Ny05LjUtOS41czQuMjU3LTkuNSA5LjUtOS41IDkuNSA0LjI1NyA5LjUgOS41YzAgMi40NDItLjkyMyA0LjY3LTIuNDQgNi4zNTNsNy40NCA3LjQ0LS43MDcuNzA3LTcuNDQtNy40NHptLTYuMzUzLTE1LjU2YzQuNjkxIDAgOC41IDMuODA5IDguNSA4LjVzLTMuODA5IDguNS04LjUgOC41LTguNS0zLjgwOS04LjUtOC41IDMuODA5LTguNSA4LjUtOC41eiIvPjwvc3ZnPg=="
+          /> -->
+          <div id="search-container">
+            <i class="font-icon icon-search iSearch"></i>
+            <input
+              type="text"
+              id="txtSearch"
+              class="searchBox searchBox-light"
+              placeholder="Search for a country ..."
+            />
+          </div>
           <!-- <input type="text" /> -->
         </div>
         <div>

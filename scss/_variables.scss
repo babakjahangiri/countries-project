@@ -1,9 +1,24 @@
-$header-color-dark: #2c3743;
-$main-bgcolor-dark: #212e37;
-$shadow-color-dark: #1d2a33;
+$header-color-dark: hsl(209, 23%, 22%); //#2c3743;
+$main-bgcolor-dark: hsl(207, 26%, 17%); //#212e37;
+$shadow-color-dark: hsl(200, 15%, 8%); //#1d2a33;
 $font-color-dark: #ffffff;
 
-$shadow-color: #dcdcdc;
 $font-color: #151515;
+$shadow-color: #dcdcdc;
 $header-color: #ffffff;
 $main-bgcolor: #fafafa;
+$font-lighter: hsl(0, 0%, 98%);
+$font-color-lightgray: hsl(0, 0%, 50%);
+
+$font-family: "Nunito Sans", sans-serif;
+
+/*
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+*/

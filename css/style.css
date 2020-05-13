@@ -1,4 +1,50 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
+/*
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap");
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+*/
 header {
   position: -webkit-sticky;
   /* Safari */
@@ -15,7 +61,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #ffffff;
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
   justify-content: center;
@@ -39,11 +85,109 @@ header div:last-child {
   text-align: right;
 }
 
-.imgmoon {
-  height: 20px;
-  width: 20px;
+.font-icon {
+  -webkit-font-smoothing: antialiased;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* You can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.iMoon {
+  height: 20px;
+  width: auto;
+}
+
+.iSearch {
+  position: absolute;
+  z-index: 1000;
+  margin-top: 13px;
+  margin-left: 15px;
+  height: 20px;
+  width: auto;
+  color: gray;
+}
+
+.container_changeMode {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_changeMode a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.container_changeMode a span {
+  font-size: 1.15em;
+}
+
+.container_changeMode a:visited {
+  color: #151515;
+}
+
+#search-container {
+  margin-left: 50px;
+}
+
+.searchBox {
+  width: 300px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  font-size: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  text-indent: 40px;
+}
+
+.searchBox-light {
+  background-color: #ffffff;
+  color: #151515;
+  -webkit-box-shadow: 0px 0px 2px 0px #151515;
+          box-shadow: 0px 0px 2px 0px #151515;
+}
+
+/*
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+*/
 main {
   background: #fafafa;
   color: #151515;
@@ -93,13 +237,13 @@ main {
 
 .country-card h1 {
   font-size: 0.85em;
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-family: "Nunito Sans", sans-serif;
   text-align: left;
   margin: 20px 0 15px 15px;
 }
 
 .country-card ul {
-  font-family: "Open Sans", sans-serif, Arial, Helvetica;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 0.75em;
   font-weight: 100;
   text-align: left;
@@ -127,7 +271,7 @@ main {
 .container--country-right {
   width: 45%;
   margin: 50px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .container--country-right h1 {
@@ -199,10 +343,5 @@ input[type="button"] {
 
 .container-border-countries span {
   font-weight: 600;
-}
-
-body {
-  padding: 0;
-  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

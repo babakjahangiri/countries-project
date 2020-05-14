@@ -25,13 +25,12 @@ function countryPage_events(btnBack) {
 
     loadPage();
   });
+}
 
-  function countryViewBtn_event(element, alpha2Code) {
-    element.addEventListener("click", (event) => {
-      pageState = 2;
-      pageAlpha2code = alpha2Code;
-      //loadPage();
-      alert("fffff");
-    });
-  }
+function countryViewBtn_event(element, alpha2Code) {
+  element.addEventListener("click", (event) => {
+    pageState = 2;
+    pageAlpha2code = alpha2Code;
+    loadPage();
+  });
 }

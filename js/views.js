@@ -146,6 +146,11 @@ function createCountryPage(countryData) {
 
   let borderCountries = [];
   let bcObj = countryData.borders;
+
+  if (bcObj.length < 1) {
+    elSpanText.style.display = "none";
+  }
+
   for (key in bcObj) {
     if (bcObj.hasOwnProperty(key)) {
       // getCountryNameAsync("IRN").then((c) => console.log(c));
@@ -158,7 +163,8 @@ function createCountryPage(countryData) {
 
         elDivBorderCountry.appendChild(elbtn);
 
-        // countryViewBtn_event(elbtn, data.alpha2Code); // problem here !!!!
+        //countryViewBtn_event();
+        countryViewBtn_event(elbtn, data.alpha2Code); // problem here !!!!
       });
 
       //langs.push(langObj[key].name);

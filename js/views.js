@@ -1,4 +1,5 @@
 const elcountryListSection = document.getElementById("countryListSection");
+let containerDrdRegion = document.querySelector("#containerDrdRegion");
 
 function createCountryListPage(countriesData) {
   elcountryListSection.innerHTML = "";
@@ -7,6 +8,15 @@ function createCountryListPage(countriesData) {
   let btnBack = document.querySelector("#btnBack");
   btnBack.style.display = "none";
   textSearch.style.display = "block";
+
+  containerDrdRegion.style.visibility = "visible";
+
+  let regionsParentEl = document.querySelector("#select-filter-continent");
+  for (var i = 0; i < regionList.length; i++) {
+    let aSelect = document.createElement("A");
+    aSelect.innerText = regionList[i];
+    regionsParentEl.appendChild(aSelect);
+  }
 
   Object.entries(countriesData).forEach(function ([index, e]) {
     createCountryItem(e);
@@ -61,6 +71,7 @@ function createCountryPage(countryData) {
   let textSearch = document.querySelector("#search-container");
   textSearch.style.display = "none";
 
+  containerDrdRegion.style.visibility = "hidden";
   // call event for back button
   countryPage_events(btnBack);
 
@@ -166,39 +177,6 @@ function createCountryPage(countryData) {
         //countryViewBtn_event();
         countryViewBtn_event(elbtn, data.alpha2Code); // problem here !!!!
       });
-
-      //langs.push(langObj[key].name);
-      //console.log(bcObj[key]);
-
-      // getCountryNameAsync(bcObj[key]).then((n) => {
-      //   console.log(n);
-      // });
-
-      //
     }
-
-    //getCountryNameAsync("IRN").then((c) => console.log(c));
   }
-
-  //var c = new Country("IR");
-  //console.log(c.getCountryName());
-
-  /*
- let elUL = document.createElement("ul");
-  divCountryItem.appendChild(elUL);
-
-  elUL.insertAdjacentHTML(
-    `beforeend`,
-    `<li><b>Population : </b>${countryData.population}</li>`
-  );
-
-  elUL.insertAdjacentHTML(
-    `beforeend`,
-    `<li><b>Region : </b>${countryData.region}</li>`
-  );
-  elUL.insertAdjacentHTML(
-    `beforeend`,
-    `<li><b>Capital : </b>${countryData.capital}</li>`
-  );
-  */
 }

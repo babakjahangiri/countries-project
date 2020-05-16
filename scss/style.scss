@@ -13,6 +13,7 @@
 .clearfix:after {
   clear: both;
 }
+
 html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
@@ -20,9 +21,10 @@ html {
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: auto;
+  margin: auto;
 }
 
 @import "_header.scss";
 @import "_main.scss";
+@import "_selectbox.scss";

@@ -26,14 +26,13 @@
 
     <main>
       <section id="filters" class="container-filters">
-        <div>
+        <div class="container-left-filters">
           <input type="button" id="btnBack" value="Back" />
-
           <!-- <img
             class="iSearch"
             src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xNS44NTMgMTYuNTZjLTEuNjgzIDEuNTE3LTMuOTExIDIuNDQtNi4zNTMgMi40NC01LjI0MyAwLTkuNS00LjI1Ny05LjUtOS41czQuMjU3LTkuNSA5LjUtOS41IDkuNSA0LjI1NyA5LjUgOS41YzAgMi40NDItLjkyMyA0LjY3LTIuNDQgNi4zNTNsNy40NCA3LjQ0LS43MDcuNzA3LTcuNDQtNy40NHptLTYuMzUzLTE1LjU2YzQuNjkxIDAgOC41IDMuODA5IDguNSA4LjVzLTMuODA5IDguNS04LjUgOC41LTguNS0zLjgwOS04LjUtOC41IDMuODA5LTguNSA4LjUtOC41eiIvPjwvc3ZnPg=="
           /> -->
-          <div id="search-container">
+          <div id="search-container" class="search-container">
             <i class="font-icon icon-search iSearch"></i>
             <input
               type="text"
@@ -42,10 +41,18 @@
               placeholder="Search for a country ..."
             />
           </div>
-          <!-- <input type="text" /> -->
         </div>
-        <div>
-          <!-- dropdown -->
+        <div id="dropdown-container" class="container-right-filters">
+          <div class="container-drdRegion" id="containerDrdRegion">
+            <div id="drdRegion" class="select-box">
+              <a>Filter by Region</a>
+              <i id="selectArrow" class="font-icon icon-angle-down iToggle"></i>
+            </div>
+            <div
+              class="select-filter-continent"
+              id="select-filter-continent"
+            ></div>
+          </div>
         </div>
       </section>
       <section id="countryListSection"></section>
@@ -56,4 +63,5 @@
   <script src="js/eventHandlers.js"></script>
   <script src="js/views.js"></script>
   <script src="js/pageController.js"></script>
+  <script src="js/selectbox.js"></script>
 </html>

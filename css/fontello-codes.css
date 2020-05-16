@@ -3,4 +3,12 @@
 .icon-moon-inv:before { content: '\e801'; } /* '' */
 .icon-search:before { content: '\e802'; } /* '' */
 .icon-down-open-big:before { content: '\e803'; } /* '' */
+.icon-down-dir:before { content: '\e804'; } /* '' */
+.icon-up-dir:before { content: '\e805'; } /* '' */
+.icon-down-open:before { content: '\e806'; } /* '' */
+.icon-up-open:before { content: '\e807'; } /* '' */
 .icon-left-open:before { content: '\f007'; } /* '' */
+.icon-angle-left:before { content: '\f104'; } /* '' */
+.icon-angle-right:before { content: '\f105'; } /* '' */
+.icon-angle-up:before { content: '\f106'; } /* '' */
+.icon-angle-down:before { content: '\f107'; } /* '' */

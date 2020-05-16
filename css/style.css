@@ -31,8 +31,8 @@ html {
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: auto;
+  margin: auto;
 }
 
 /*
@@ -46,10 +46,6 @@ body {
 
 */
 header {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +123,17 @@ header div:last-child {
   color: gray;
 }
 
+.iToggle {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: larger;
+  margin-left: 8px;
+  height: 16px;
+  width: auto;
+  color: gray;
+}
+
 .container_changeMode {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -157,8 +164,52 @@ header div:last-child {
   color: #151515;
 }
 
-#search-container {
+/*
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+*/
+main {
+  margin: auto;
+  background: #fafafa;
+  color: #151515;
+  -webkit-box-shadow: 0px 2px 5px #e6e6e6;
+  box-shadow: inset 0px 2px 5px #e6e6e6;
+  padding-top: 50px;
+  min-height: 500px;
+}
+
+.container-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+
+.container-left-filters {
+  width: 50%;
+}
+
+.search-container {
   margin-left: 50px;
+}
+
+.container-right-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  text-align: right;
+  margin-right: 50px;
 }
 
 .searchBox {
@@ -178,26 +229,6 @@ header div:last-child {
           box-shadow: 0px 0px 2px 0px #151515;
 }
 
-/*
-
-- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
-- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
-- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
-- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
-- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
-- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
-
-*/
-main {
-  background: #fafafa;
-  color: #151515;
-  width: 100%;
-  -webkit-box-shadow: 0px 2px 5px #e6e6e6;
-  box-shadow: inset 0px 2px 5px #e6e6e6;
-  padding-top: 50px;
-  min-height: 500px;
-}
-
 .container--country-list {
   display: -ms-grid;
   display: grid;
@@ -206,7 +237,7 @@ main {
   -webkit-column-gap: 20px;
           column-gap: 20px;
   row-gap: 30px;
-  width: 98%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -336,6 +367,18 @@ input[type="button"] {
           box-shadow: 0px 3px 20px #dcdcdc;
 }
 
+select {
+  font-size: 1em;
+  margin: 5px auto 5px 60px;
+  padding: 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+  color: #151515;
+  -webkit-box-shadow: 0px 3px 20px #dcdcdc;
+          box-shadow: 0px 3px 20px #dcdcdc;
+}
+
 .container-border-countries {
   margin: 60px auto 5px 10px;
   font-size: 0.85em;
@@ -343,5 +386,91 @@ input[type="button"] {
 
 .container-border-countries span {
   font-weight: 600;
+}
+
+/*the container must be positioned relative:*/
+.select-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  right: 0;
+  font-family: "Nunito Sans", sans-serif;
+  width: auto;
+  min-width: 240px;
+  height: 40px;
+  border: solid 1px #c5c5c5;
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  text-indent: 1px;
+  -webkit-box-shadow: 0px 0px 2px 0px #151515;
+          box-shadow: 0px 0px 2px 0px #151515;
+  border: none;
+  background-color: #fff;
+}
+
+.select-box > a:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Nunito Sans", sans-serif;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 20px;
+  margin-left: 12px;
+  height: 40px;
+  width: 100%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+  border-radius: 2px;
+}
+
+.select-filter-continent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 248px;
+  z-index: 100;
+  font-family: "Nunito Sans", sans-serif;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  margin-top: 42px;
+}
+
+.select-filter-continent a {
+  width: 240px;
+  display: block;
+  z-index: 100;
+  padding: 5px;
+  text-indent: 10px;
+}
+
+.select-filter-continent a:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.container-drdRegion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
 }
 /*# sourceMappingURL=style.css.map */

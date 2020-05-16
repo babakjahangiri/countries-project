@@ -14,7 +14,23 @@
 
 <glyph glyph-name="down-open-big" unicode="&#xe803;" d="M63 570l370-356 372 356q22 26 48 0 26-22 0-48l-396-392q-22-22-48 0l-396 392q-26 26 0 48 24 24 50 0z" horiz-adv-x="866" />
 
+<glyph glyph-name="down-dir" unicode="&#xe804;" d="M571 457q0-14-10-25l-250-250q-11-11-25-11t-25 11l-250 250q-11 11-11 25t11 25 25 11h500q14 0 25-11t10-25z" horiz-adv-x="571.4" />
+
+<glyph glyph-name="up-dir" unicode="&#xe805;" d="M571 171q0-14-10-25t-25-10h-500q-15 0-25 10t-11 25 11 26l250 250q10 10 25 10t25-10l250-250q10-11 10-26z" horiz-adv-x="571.4" />
+
+<glyph glyph-name="down-open" unicode="&#xe806;" d="M939 399l-414-413q-10-11-25-11t-25 11l-414 413q-11 11-11 26t11 25l93 92q10 11 25 11t25-11l296-296 296 296q11 11 25 11t26-11l92-92q11-11 11-25t-11-26z" horiz-adv-x="1000" />
+
+<glyph glyph-name="up-open" unicode="&#xe807;" d="M939 107l-92-92q-11-10-26-10t-25 10l-296 297-296-297q-11-10-25-10t-25 10l-93 92q-11 11-11 26t11 25l414 414q11 10 25 10t25-10l414-414q11-11 11-25t-11-26z" horiz-adv-x="1000" />
+
 <glyph glyph-name="left-open" unicode="&#xf007;" d="M0 353l391 391q18 18 43 18 24 0 43-18 18-18 18-44t-18-43l-304-304 304-305q18-17 18-43t-18-43q-18-18-43-18t-43 18z" horiz-adv-x="495.1" />
+
+<glyph glyph-name="angle-left" unicode="&#xf104;" d="M350 546q0-7-6-12l-219-220 219-219q6-6 6-13t-6-13l-28-28q-5-5-12-5t-13 5l-260 261q-6 5-6 12t6 13l260 260q5 6 13 6t12-6l28-28q6-5 6-13z" horiz-adv-x="357.1" />
+
+<glyph glyph-name="angle-right" unicode="&#xf105;" d="M332 314q0-7-5-12l-261-261q-5-5-12-5t-13 5l-28 28q-6 6-6 13t6 13l219 219-219 220q-6 5-6 12t6 13l28 28q5 6 13 6t12-6l261-260q5-5 5-13z" horiz-adv-x="357.1" />
+
+<glyph glyph-name="angle-up" unicode="&#xf106;" d="M600 189q0-7-6-12l-28-28q-5-6-12-6t-13 6l-220 219-219-219q-5-6-13-6t-12 6l-28 28q-6 5-6 12t6 13l260 260q5 6 12 6t13-6l260-260q6-5 6-13z" horiz-adv-x="642.9" />
+
+<glyph glyph-name="angle-down" unicode="&#xf107;" d="M600 439q0-7-6-12l-260-261q-5-5-13-5t-12 5l-260 261q-6 5-6 12t6 13l28 28q5 6 12 6t13-6l219-219 220 219q5 6 13 6t12-6l28-28q6-5 6-13z" horiz-adv-x="642.9" />
 </font>
 </defs>
 </svg>

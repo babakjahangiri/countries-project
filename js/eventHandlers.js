@@ -7,6 +7,39 @@ function countryList_events() {
   textSearch.addEventListener("input", (event) => {
     searchCountry(textSearch.value.trim());
   });
+
+  let drdRegion = document.querySelector("#drdRegion");
+  let selectArrow = document.querySelector("#selectArrow");
+  let elRegions = document.querySelector("#select-filter-continent");
+  let isDown;
+  let isUp;
+  elRegions.style.display = "none";
+
+  drdRegion.addEventListener(
+    "click",
+    (event) => {
+      isDown = selectArrow.classList.toggle("icon-angle-down");
+      isUp = selectArrow.classList.toggle("icon-angle-up");
+
+      if (isDown == true) {
+        elRegions.style.display = "none";
+      }
+      if (isUp == true) {
+        elRegions.style.display = "block";
+      }
+      event.stopPropagation();
+    },
+    false
+  );
+
+  let bDoc = document.getElementsByTagName("body");
+  bDoc[0].addEventListener("click", (event) => {
+    if (isDown == false) {
+      elRegions.style.display = "none";
+      isDown = selectArrow.classList.toggle("icon-angle-down");
+      isUp = selectArrow.classList.toggle("icon-angle-up");
+    }
+  });
 }
 
 function countryCardClick(element, alpha2Code) {

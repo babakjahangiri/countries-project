@@ -1,0 +1,68 @@
+/*the container must be positioned relative:*/
+.select-box {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  right: 0;
+  font-family: $font-family;
+  width: auto;
+  min-width: 240px;
+  height: 40px;
+  border: solid 1px rgb(197, 197, 197);
+  border-radius: 2px;
+  font-size: 1em;
+  font-family: "Nunito Sans", sans-serif;
+  text-indent: 1px;
+  box-shadow: 0px 0px 2px 0px #151515;
+  border: none;
+  background-color: #fff;
+
+  //margin-right: 50px;
+
+  > a:first-child {
+    display: flex;
+    font-family: $font-family;
+    text-decoration: none;
+    align-self: center;
+    margin-top: 20px;
+    margin-left: 12px;
+    height: 40px;
+    width: 100%;
+    justify-content: left;
+    text-align: left;
+    border-radius: 2px;
+  }
+}
+
+.select-filter-continent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 248px;
+  z-index: 100;
+  font-family: $font-family;
+  text-align: left;
+  border: 1px solid rgb(224, 224, 224);
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 42px;
+  a {
+    width: 240px;
+    display: block;
+    z-index: 100;
+    padding: 5px;
+    text-indent: 10px;
+    &:hover {
+      background-color: rgb(240, 240, 240);
+      cursor: pointer;
+    }
+  }
+}
+//.select-box:focus-within {
+// outline: -webkit-focus-ring-color auto 5px;
+//}
+
+.container-drdRegion {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}

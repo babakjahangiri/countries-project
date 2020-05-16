@@ -27,18 +27,32 @@ function countryList_events() {
       if (isUp == true) {
         elRegions.style.display = "block";
       }
+
       event.stopPropagation();
     },
     false
   );
 
   let bDoc = document.getElementsByTagName("body");
-  bDoc[0].addEventListener("click", (event) => {
-    if (isDown == false) {
-      elRegions.style.display = "none";
-      isDown = selectArrow.classList.toggle("icon-angle-down");
-      isUp = selectArrow.classList.toggle("icon-angle-up");
-    }
+  bDoc[0].addEventListener(
+    "click",
+    (event) => {
+      if (isDown == false) {
+        elRegions.style.display = "none";
+        isDown = selectArrow.classList.toggle("icon-angle-down");
+        isUp = selectArrow.classList.toggle("icon-angle-up");
+      }
+      //event.stopPropagation();
+    },
+    false
+  );
+}
+
+function drdCountryItemClick(element) {
+  element.addEventListener("click", (event) => {
+    pageState = 1;
+    //loadPage();
+    listCountriesInContinent(element.textContent);
   });
 }
 

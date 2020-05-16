@@ -36,5 +36,5 @@ async function getCountryByRegionAsync(region) {
 }
 
 function getRegions() {
-  return ["Africa", "America", "Asia", "Europe", "Oceania"];
+  return ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 }

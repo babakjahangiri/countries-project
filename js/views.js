@@ -9,13 +9,16 @@ function createCountryListPage(countriesData) {
   btnBack.style.display = "none";
   textSearch.style.display = "block";
 
-  containerDrdRegion.style.visibility = "visible";
+  containerDrdRegion.style.display = "flex";
 
   let regionsParentEl = document.querySelector("#select-filter-continent");
+  regionsParentEl.textContent = "";
   for (var i = 0; i < regionList.length; i++) {
     let aSelect = document.createElement("A");
+    aSelect.id = `reg_${i}`;
     aSelect.innerText = regionList[i];
     regionsParentEl.appendChild(aSelect);
+    drdCountryItemClick(aSelect);
   }
 
   Object.entries(countriesData).forEach(function ([index, e]) {
@@ -71,7 +74,7 @@ function createCountryPage(countryData) {
   let textSearch = document.querySelector("#search-container");
   textSearch.style.display = "none";
 
-  containerDrdRegion.style.visibility = "hidden";
+  containerDrdRegion.style.display = "none";
   // call event for back button
   countryPage_events(btnBack);
 
